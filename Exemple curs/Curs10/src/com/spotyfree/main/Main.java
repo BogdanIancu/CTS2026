@@ -6,6 +6,9 @@ import com.spotyfree.memento.SpotyfreeAppPage;
 import com.spotyfree.observer.Song;
 import com.spotyfree.observer.User;
 import com.spotyfree.state.Player;
+import com.spotyfree.template.MobileAppLogin;
+import com.spotyfree.template.SpotyfreeLogin;
+import com.spotyfree.template.TvAppLogin;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,5 +37,8 @@ public class Main {
 
         app.navigateBack();
         System.out.println(app.getCurrentPage().getTitle());
+
+        SpotyfreeLogin login = new TvAppLogin();
+        login.loadAccountDetails();
     }
 }
